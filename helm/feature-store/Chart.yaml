@@ -1,0 +1,15 @@
+apiVersion: v2
+name: feature-store
+description: Helm chart for the feature-store-platform serving API
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+keywords:
+  - feature-store
+  - mlops
+  - fastapi
+home: https://github.com/abhisheksawant52/feature-store-platform
+sources:
+  - https://github.com/abhisheksawant52/feature-store-platform
+maintainers:
+  - name: Abhishek Sawant

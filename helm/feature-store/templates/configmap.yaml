@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "feature-store.fullname" . }}-config
+  labels:
+    {{- include "feature-store.labels" . | nindent 4 }}
+data:
+  FEATURE_STORE_ENVIRONMENT: {{ .Values.config.environment | quote }}
+  FEATURE_STORE_LOG_LEVEL: {{ .Values.config.logLevel | quote }}
+  FEATURE_STORE_OFFLINE_STORE_URI: {{ .Values.config.offlineStoreUri | quote }}
+  FEATURE_STORE_OFFLINE_STORE_FORMAT: {{ .Values.config.offlineStoreFormat | quote }}
+  FEATURE_STORE_REDIS_KEY_PREFIX: {{ .Values.config.redisKeyPrefix | quote }}
+  FEATURE_STORE_ONLINE_TTL_SECONDS: {{ .Values.config.onlineTtlSeconds | quote }}
